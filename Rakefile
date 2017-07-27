@@ -11,6 +11,7 @@ begin
 rescue LoadError
 end
 
+desc 'run a pry console with the project environment loaded'
 task :console do
   require 'pry'
   puts '-- Project Console --'
