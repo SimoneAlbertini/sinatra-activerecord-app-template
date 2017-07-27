@@ -5,6 +5,7 @@ gem 'sinatra-activerecord'
 gem 'rake'
 gem 'sqlite3'
 gem 'require_all'
+gem 'pry'
 
 group :test do
   gem 'rspec'

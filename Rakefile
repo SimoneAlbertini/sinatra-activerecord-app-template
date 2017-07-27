@@ -11,6 +11,13 @@ begin
 rescue LoadError
 end
 
+task :console do
+  require 'pry'
+  puts '-- Project Console --'
+  Dir.chdir('lib')
+  system 'pry -I . -I ../ -r environment.rb'
+end
+
 namespace :db do
   task :load_config do
     require './lib/app.rb'
@@ -21,7 +28,7 @@ namespace :db do
     desc 'Setup the DB test environment (create and migrate)'
     task :setup do
       system('RACK_ENV=test rake db:create') and
-      system('RACK_ENV=test rake db:migrate')
+          system('RACK_ENV=test rake db:migrate')
     end
   end
 end
