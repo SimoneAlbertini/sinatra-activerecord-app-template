@@ -23,4 +23,9 @@ Run the tests (and setup the test DB)
 ```
 > rackup -p 9999
 ```
-and go to localhost:9999 to see the app running
+
+# Project console
+```
+> rake console
+```
+to open a pry console with the project environment loaded
