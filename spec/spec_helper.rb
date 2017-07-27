@@ -17,8 +17,7 @@
 ENV['RACK_ENV'] = 'test'
 
 require 'capybara/rspec'
-require 'require_all'
-require_all './lib'
+require_relative '../lib/environment'
 
 Capybara.register_driver :rack_test do |app|
   Capybara::RackTest::Driver.new(app, headers: {'HTTP_USER_AGENT' => 'Capybara'})
